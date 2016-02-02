@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.cindywang.rewardfitbit.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Today you still have"
+        android:id="@+id/no_data_label"
+        android:textSize="30dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_data_label"
+        android:id="@+id/point_text"
+        android:layout_marginTop="50dp"
+        android:text="10 points"
+        android:textSize="50dp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/point_text"
+        android:id="@+id/no_data_label1"
+        android:layout_marginTop="50dp"
+        android:text="to go"
+        android:textSize="30dp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center" />
+
+</RelativeLayout>

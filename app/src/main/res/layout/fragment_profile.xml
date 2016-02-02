@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="Hello Philisha"
+        android:id="@+id/textView2"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Username"
+        android:id="@+id/usernamelabel"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@id/usernamelabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="philisha"
+        android:id="@+id/usernametext"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernamelabel"
+        android:layout_marginLeft="30dp"
+        android:text="Gender"
+        android:id="@+id/genderlabel"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernamelabel"
+        android:layout_toRightOf="@+id/genderlabel"
+        android:layout_marginLeft="30dp"
+        android:text="Female"
+        android:id="@+id/gendertext"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderlabel"
+        android:layout_marginLeft="30dp"
+        android:text="Hight"
+        android:id="@+id/heightlabel"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderlabel"
+        android:layout_toRightOf="@+id/heightlabel"
+        android:layout_marginLeft="30dp"
+        android:text="5'4''"
+        android:id="@+id/heighttext"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightlabel"
+        android:layout_marginLeft="30dp"
+        android:text="Weight"
+        android:id="@+id/weightlabel"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightlabel"
+        android:layout_toRightOf="@+id/weightlabel"
+        android:layout_marginLeft="30dp"
+        android:text="120 pounds"
+        android:id="@+id/weighttext"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Target Heart Rate"
+        android:id="@+id/target_heartrate_label"
+        android:textSize="15dp"
+        android:layout_alignBottom="@+id/target_heartrate_text"
+        android:layout_below="@+id/weightlabel"
+        android:layout_toLeftOf="@+id/weighttext"
+        android:layout_toStartOf="@+id/weighttext" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightlabel"
+        android:layout_toRightOf="@+id/target_heartrate_label"
+        android:layout_marginLeft="30dp"
+        android:text="80"
+        android:id="@+id/target_heartrate_text"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/target_heartrate_label"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Work done"
+        android:id="@+id/progress_label"
+        android:textSize="20dp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_below="@+id/progress_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

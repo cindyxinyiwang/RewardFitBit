@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
-        android:text="Hello Philisha"
+        android:text="Hello Philisha!"
         android:id="@+id/textView2"
         android:textSize="20dp" />
 
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/genderlabel"
         android:layout_marginLeft="30dp"
-        android:text="Hight"
+        android:text="Height"
         android:id="@+id/heightlabel"
         android:textSize="15dp" />
 

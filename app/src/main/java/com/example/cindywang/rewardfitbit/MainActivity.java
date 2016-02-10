@@ -2,7 +2,9 @@ package com.example.cindywang.rewardfitbit;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -73,8 +75,49 @@ public class MainActivity extends ActionBarActivity
         mHeartRateMap = new HashMap<>();
 
         //new getURLdata(findViewById(android.R.id.content)).execute();
+        setUpFitBit();
 
     }
+
+
+    public void setUpFitBit() {
+        /*
+        OAuthService service = new ServiceBuilder()
+                .provider(FitBitApi.class)
+                .apiKey("9517905c639a2a8c6543562da7dd623b") //replaced my app key with * for security
+                .apiSecret("21c1c8a39647a42b3d9df06cc1bd348e") //replace my app secret with * for security
+                .callback("http://fitbit.com/oauth/callback") //arbitary value. I used http://fitbit.com/oauth/callback which isn't a valid address
+                .debug() //for more verbose messages while testing
+                .build();
+        final Token requestToken = service.getRequestToken();
+
+        final String authURL = service.getAuthorizationUrl(requestToken);
+        //webview.loadUrl(authURL);*/
+        final String authURL = "https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=227FM7&redirect_uri=http%3A%2F%2Fexample.com%2Ffitbit_auth&scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight";
+
+        CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder().build();
+                openCustomTab(
+                        this, customTabsIntent, Uri.parse(authURL));
+    }
+
+    public static void openCustomTab(Activity activity,
+                                     CustomTabsIntent customTabsIntent,
+                                     Uri uri) {
+        //String packageName = CustomTabsHelper.getPackageNameToUse(activity);
+        String packageName = "com.example.cindywang.rewardfitbit";
+        //If we cant find a package name, it means theres no browser that supports
+        //Chrome Custom Tabs installed. So, we fallback to the webview
+        if (packageName == null) {
+            /*
+            if (fallback != null) {
+                fallback.openUri(activity, uri);
+            }*/
+        } else {
+            customTabsIntent.intent.setPackage(packageName);
+            customTabsIntent.launchUrl(activity, uri);
+        }
+    }
+
 
     @Override
     public void updateHeartData() {
